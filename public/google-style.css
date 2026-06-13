@@ -1,0 +1,124 @@
+#write-review-btn,
+.scroll-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffa534;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#write-review-btn:hover,
+.scroll-btn:hover {
+  background-color: var(--hover-color);
+}
+
+#write-review-btn:active,
+.scroll-btn:active {
+  background-color: var(--active-color);
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#google-logo {
+  max-width: 200px; /* Adjust this based on your desired size */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Optional: add space below the logo */
+}
+#reviews-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+  background-color: var(--bg-color);
+  border-radius: 5px;
+}
+
+.review-card {
+  flex: 0 0 auto;
+  width: 40%;
+  /* border: 1px solid var(--border-color); */
+  border-radius: 25px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.review-card:hover {
+  transform: scale(1.05);
+}
+
+.rating {
+  color: #ffa534;
+  margin-bottom: 5px;
+  font-size: 25px;
+  display: flex;
+  align-items: left;
+}
+
+.rating:before,
+.rating:after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('star.svg') no-repeat center;
+  background-size: contain;
+}
+
+.rating:before {
+  margin-right: 5px;
+}
+
+.rating:after {
+  margin-left: 5px;
+}
+
+
+.button-container {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+ 
+
+  #write-review-btn {
+      order: -1; /* Moves the button above the logo on mobile */
+      margin-bottom: 10px;
+  }
+
+  #reviews-container {
+      gap: 10px; 
+      padding: 10px;
+  }
+
+  .review-card {
+      width: calc(100% - 20px); 
+  }
+
+  .button-container {
+      right: 10px;
+      bottom: 10px;
+  }
+}
+
+
+#total-reviews {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 5.5rem; /* Example font size, adjust as needed */
+}
